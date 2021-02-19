@@ -1,3 +1,11 @@
+steps :
+1- front end template
+2- virtual env
+3- django project
+
+
+
+
 1-job:
         -title
         -location
@@ -31,6 +39,6 @@
         -recent posts
 
 
-home
-content us 
-login
+3-home
+4-content us 
+5-login
