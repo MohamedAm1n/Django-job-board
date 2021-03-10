@@ -12,7 +12,6 @@ def job_list_view(request):
     return render(request, 'job/job_list.html',context)
 
 
-
 def job_details_view(request ,id):
     # Show job details
     job_detail = Work.objects.get(id=id)
