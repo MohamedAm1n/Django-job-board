@@ -7,10 +7,9 @@ def job_list_view(request):
 # list all jobs
     list_jobs = Work.objects.all()
     context={
-        "jobs":list_jobs # data send to template with this name
+        "jobs":list_jobs ,# data send to template with this name
     }
     return render(request, 'job/job_list.html',context)
-
 
 
 def job_details_view(request ,id):
