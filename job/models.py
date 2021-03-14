@@ -26,16 +26,13 @@ class Work(models.Model):
     cat = models.ForeignKey(Category,on_delete=models.CASCADE)
     image = models.ImageField(upload_to=upload_image)
     
-    def __str__(self)
+    def __str__(self):
+        return self.title
 # 
 # # End of class Job
     # @property
     # def image_url(self):
     #     if self.image and hasattr(self.image, 'url'):
     #         return self.image.url
-
-
-
-
 
 # # كنت بعمل الريليشن بين الوظيفة و الكاتيجوري
