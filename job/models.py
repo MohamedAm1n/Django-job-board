@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.fields.files import FileField
 from django.template.defaultfilters import slugify
@@ -18,6 +19,7 @@ def upload_image(instance,filename):
     return "jobs/%s.%s"%(instance.published_at,extension)
 pass
 class Work(models.Model):
+    owner        = models.ForeignKey(User, related_name='job_owner', on_delete=models.CASCADE)
     title        = models.CharField(max_length=100)
     job_type     = models.CharField(max_length=15, choices=JOB_TYPE)
     description  = models.TextField(max_length=1000)
