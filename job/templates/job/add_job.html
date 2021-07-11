@@ -20,8 +20,9 @@
                 <div class="apply_job_form white-bg">
                     <h4>Add New Job</h4>
                     <form method="POST" enctype="multipart/form-data">
-                        {% csrf_token %} {% bootstrap_form form %} {% buttons %}
-                        <button type="submit" class="boxed-btn3 w-100">Post Job</button> {% endbuttons %}
+                        {% csrf_token %} 
+                        {% bootstrap_form form %} 
+                        {% buttons %}<button type="submit" class="boxed-btn3 w-100">Post Job</button> {% endbuttons %}
                     </form>
                 </div>
             </div>
