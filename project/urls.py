@@ -22,6 +22,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('jobs/', include('job.urls',namespace='jobs')),
+    path('api-auth/', include('rest_framework.urls')),
     
 ]
 # ... the rest of your URLconf goes here ...

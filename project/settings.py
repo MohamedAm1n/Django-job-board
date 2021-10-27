@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'blog',
     "bootstrap4",
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
