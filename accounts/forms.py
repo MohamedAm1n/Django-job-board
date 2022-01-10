@@ -5,5 +5,5 @@ from django.forms import fields
 
 class SignupForm(UserCreationForm):
     class Meta:
-        model='User'
-        fields=['UserName','email','password1','password2']
+        model=User
+        fields=['username','email','password1','password2']
