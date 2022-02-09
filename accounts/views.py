@@ -26,3 +26,8 @@ def SignUp(request):
 def profile(request):
     profile=Profile.objects.get(user=request.user)
     return render(request,'accounts/profile.html',{'profile':profile})
+
+
+
+def EditProfile(request):
+    return render(request,'accounts/profile_edit.html')
