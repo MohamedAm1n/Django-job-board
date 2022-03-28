@@ -21,7 +21,8 @@
                     <h4>Edit Profile</h4>
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %} 
-                        {% bootstrap_form form %} 
+                        {% bootstrap_form userform %} 
+                        {% bootstrap_form profileform %} 
                         {% buttons %}<button type="submit" class="boxed-btn3 w-100">Edit</button> {% endbuttons %}
                     </form>
                 </div>

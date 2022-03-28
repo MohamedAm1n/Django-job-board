@@ -25,6 +25,7 @@ urlpatterns = [
     path('jobs/', include('job.urls',namespace='jobs')),
     path('api-auth/', include('rest_framework.urls')),
     
+    
 ]
 # ... the rest of your URLconf goes here ...
 urlpatterns +=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

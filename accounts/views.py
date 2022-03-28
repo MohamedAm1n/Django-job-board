@@ -4,7 +4,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 
 from accounts.models import Profile
-from .forms import SignupForm
+from .forms import SignupForm , UserForm , ProfileForm
 # Create your views here.
 
 def SignUp(request):
@@ -30,4 +30,10 @@ def profile(request):
 
 
 def EditProfile(request):
-    return render(request,'accounts/profile_edit.html')
+    profile = Profile.objects.get(user=request.user)
+    if request.method=='POST':
+        pass
+    else :
+        userform= UserForm(instance=request.user)
+        profileform = ProfileForm(instance=profile)
+    return render(request,'accounts/profile_edit.html',{'userform':userform,'profileform':profileform})
